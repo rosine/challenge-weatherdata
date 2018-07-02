@@ -1,7 +1,7 @@
 package de.exxcellent.challenge;
 
+//junit imports
 import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
