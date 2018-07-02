@@ -9,5 +9,10 @@ import java.util.ArrayList;
  */
 public interface Parser {
 
+	/**
+	 * Parses fiven string.
+	 * @param s to be parsed string
+	 * @return String[] of parsed String
+	 */
 	public String[] parse(String s);
 }

@@ -41,6 +41,10 @@ public class Controller {
 		}
 	}
 
+	/**
+	 * Searches for the smallest spread in the given file.
+	 * @param path to be searched file
+	 */
 	public void getSmallestSpread(String path) {
 		open(path);
 		
@@ -79,6 +83,11 @@ public class Controller {
 		}
 	}
 	
+	/**
+	 * Calculates the spread for given data.
+	 * @param parsed contains to be used data
+	 * @return spread of given data
+	 */
 	private float getSpread(String[] parsed) {
 		float spread = Float.parseFloat(parsed[column2].trim()) - Float.parseFloat(parsed[column3].trim());
 		return spread;

@@ -7,6 +7,7 @@ package de.exxcellent.challenge;
  */
 public class SimpleCSVParser implements Parser {
 
+	// delimiter for parsing
 	private String delimiter;
 	
 	public SimpleCSVParser() {
