@@ -1,6 +1,5 @@
 package de.exxcellent.challenge;
 
-import java.util.ArrayList;
 
 /**
  * An interface for parsers.
