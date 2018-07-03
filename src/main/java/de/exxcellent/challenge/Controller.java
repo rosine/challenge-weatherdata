@@ -15,8 +15,11 @@ public class Controller {
 	private Parser parser;
 	private boolean streamIsOpen;
 	private Reader reader;
+	//to be printed value
 	private int column1;
+	//value 1 for operation
 	private int column2;
+	//value 2 for operation
 	private int column3;
 	
 	/**
