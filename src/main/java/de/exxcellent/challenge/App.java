@@ -11,7 +11,16 @@ public final class App {
     public static void main(String... args) {
 
         Controller controller = new Controller();
-        controller.getSmallestSpread("src\\main\\resources\\de\\exxcellent\\challenge\\weather.csv");
+		controller.setColumn1(0);
+		controller.setColumn2(1);
+		controller.setColumn3(2);
+		controller.setOperation(Operation.SPREAD);
+        controller.operate("src\\main\\resources\\de\\exxcellent\\challenge\\weather.csv");
+		controller.setColumn1(0);
+		controller.setColumn2(5);
+		controller.setColumn3(6);
+		controller.setOperation(Operation.ABSOLUTEDISTANCE);
+        controller.operate("src\\main\\resources\\de\\exxcellent\\challenge\\football.csv");
         
     }
 }
