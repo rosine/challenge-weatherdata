@@ -49,7 +49,11 @@ public class ControllerTest {
 		setPath("src\\main\\resources\\de\\exxcellent\\challenge\\weather.csv");
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(out));
-		controller.getSmallestSpread(path);
+		controller.setColumn1(0);
+		controller.setColumn2(1);
+		controller.setColumn3(2);
+		controller.setOperation(Operation.SPREAD);
+		controller.operate(path);
 		System.out.println(out);
 		assertTrue((out.toString()).contains("14"));
 		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
@@ -62,11 +66,49 @@ public class ControllerTest {
 	@Test
 	public void getSmallestSpreadFromNotExistingFile() {
 		setPath("");
-		controller.getSmallestSpread(path);
+		controller.setColumn1(0);
+		controller.setColumn2(1);
+		controller.setColumn3(2);
+		controller.setOperation(Operation.SPREAD);
+		controller.operate(path);
 		
 		assertFalse(controller.getStreamIsOpen());
 	}
 
+	/**
+	 * Get smallest absolute distance in football.csv
+	 * Result is day Aston_Villa.
+	 */
+	@Test
+	public void getSmallestAbsoluteDistance() {
+		setPath("src\\main\\resources\\de\\exxcellent\\challenge\\football.csv");
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(out));
+		controller.setColumn1(0);
+		controller.setColumn2(5);
+		controller.setColumn3(6);
+		controller.setOperation(Operation.ABSOLUTEDISTANCE);
+		controller.operate(path);
+		System.out.println(out);
+		assertTrue((out.toString()).contains("Aston_Villa"));
+		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
+		assertFalse(controller.getStreamIsOpen());
+	}
+	
+	/**
+	 * Get smallest absolute distance from not existing file. No stream should be opened.
+	 */
+	@Test
+	public void getSmallestAbsoluteDistanceFromNotExistingFile() {
+		setPath("");
+		controller.setColumn1(0);
+		controller.setColumn2(5);
+		controller.setColumn3(6);
+		controller.setOperation(Operation.ABSOLUTEDISTANCE);
+		controller.operate(path);
+		
+		assertFalse(controller.getStreamIsOpen());
+	}
 
 	private void setPath(String path) {
 		this.path = path;
