@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.Reader;
 
 import java.io.InputStream;
 
@@ -7,6 +7,8 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import de.exxcellent.challenge.Reader.StreamReader;
 
 /**
  * A test class for StreamReader.

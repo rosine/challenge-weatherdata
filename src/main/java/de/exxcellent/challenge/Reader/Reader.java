@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.Reader;
 
 import java.io.InputStream;
 /**

@@ -1,10 +1,12 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.Parser;
 
 //junit imports
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import de.exxcellent.challenge.Parser.SimpleCSVParser;
 
 public class SimpleCSVParserTest {
 

@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import de.exxcellent.challenge.Parser.Parser;
+import de.exxcellent.challenge.Parser.SimpleCSVParser;
+import de.exxcellent.challenge.Reader.Reader;
+import de.exxcellent.challenge.Reader.StreamReader;
+
 /**
  * The class controlling reading data bases and operating them.
  * @author Bettina Weller

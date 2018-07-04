@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.Reader;
 
 // java imports
 import java.io.File;

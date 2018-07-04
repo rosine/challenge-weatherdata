@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.Parser;
 
 /**
  * A simple parser for csv input.
