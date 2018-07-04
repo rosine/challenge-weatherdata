@@ -1,13 +1,12 @@
 package de.exxcellent.challenge;
 
-import static org.junit.Assert.*;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.io.FileDescriptor;
 import java.io.FileOutputStream;
 
 //junit imports
+import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -77,7 +76,7 @@ public class ControllerTest {
 
 	/**
 	 * Get smallest absolute distance in football.csv
-	 * Result is day Aston_Villa.
+	 * Result is team Aston_Villa.
 	 */
 	@Test
 	public void getSmallestAbsoluteDistance() {
